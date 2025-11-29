@@ -5,9 +5,18 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import joblib
 
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from ml.preprocess import load_and_preprocess
 from ml.train import get_models
 from ml.evaluate import evaluate_models
+from ml.explain import explain_model
+from ml.insights import generate_insights
+from ml.pdfgen import generate_pdf
+
 
 st.set_page_config(page_title="InsightX Dashboard", layout="wide")
 
