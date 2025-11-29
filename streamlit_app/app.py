@@ -116,8 +116,8 @@ if st.button("Predict on New Sample"):
     else:
         model = st.session_state["best_model"]
         
-        # random sample from training
-        sample = X_test.iloc[:100]  # first 100 rows
+       
+        sample = X_test.iloc[:100] 
 
         st.info("Generating SHAP Summary Plot...")
 
@@ -129,7 +129,18 @@ if st.button("Predict on New Sample"):
 
         from ml.pdfgen import generate_pdf
 
-if st.button("Download Report"):
-    path = generate_pdf(auto_report)
-    with open(path, "rb") as f:
-        st.download_button("⬇ Download PDF", data=f, file_name="InsightX_Report.pdf")
+
+st.subheader("📄 Generate PDF Report")
+
+if 'auto_report' not in st.session_state:
+    st.warning("Please run the ML pipeline first to generate insights.")
+else:
+    if st.button("Download Report"):
+        path = generate_pdf(st.session_state["auto_report"])
+        with open(path, "rb") as f:
+            st.download_button(
+                "⬇ Download PDF",
+                data=f,
+                file_name="InsightX_Report.pdf"
+            )
+
