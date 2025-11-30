@@ -8,3 +8,13 @@ scikit-learn
 joblib
 shap
 fpdf2
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+scikit-learn
+joblib
+shap
+fpdf2
