@@ -19,6 +19,14 @@
 👉 **Streamlit App:** *(https://lelixn-insightx.streamlit.app/)*  
 
 ---
+📸 UI Preview
+
+Below is an example of the InsightX interface while uploading and visualizing a dataset:
+
+Upload → Validate → Preview → Explore → Generate ML Insights
+
+<img width="1844" height="877" alt="Screenshot 2025-12-01 230240" src="https://github.com/user-attachments/assets/00a3d872-04ab-40ef-a082-39df94915b6d" />
+
 
 # 🚀 Features
 
